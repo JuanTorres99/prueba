@@ -1,0 +1,2 @@
+class Bolso < ApplicationRecord
+end

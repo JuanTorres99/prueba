@@ -1,0 +1,37 @@
+<%= form_with(model: bolso, local: true) do |form| %>
+  <% if bolso.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(bolso.errors.count, "error") %> prohibited this bolso from being saved:</h2>
+
+      <ul>
+      <% bolso.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= form.label :marca %>
+    <%= form.text_field :marca %>
+  </div>
+
+  <div class="field">
+    <%= form.label :modelo %>
+    <%= form.text_field :modelo %>
+  </div>
+
+  <div class="field">
+    <%= form.label :cantidad %>
+    <%= form.number_field :cantidad %>
+  </div>
+
+  <div class="field">
+    <%= form.label :precio %>
+    <%= form.number_field :precio %>
+  </div>
+
+  <div class="actions">
+    <%= form.submit %>
+  </div>
+<% end %>

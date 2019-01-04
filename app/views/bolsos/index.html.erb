@@ -1,0 +1,33 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Bolsos</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Marca</th>
+      <th>Modelo</th>
+      <th>Cantidad</th>
+      <th>Precio</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @bolsos.each do |bolso| %>
+      <tr>
+        <td><%= bolso.marca %></td>
+        <td><%= bolso.modelo %></td>
+        <td><%= bolso.cantidad %></td>
+        <td><%= bolso.precio %></td>
+        <td><%= link_to 'Show', bolso %></td>
+        <td><%= link_to 'Edit', edit_bolso_path(bolso) %></td>
+        <td><%= link_to 'Destroy', bolso, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Bolso', new_bolso_path %>

@@ -1,0 +1,24 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Marca:</strong>
+  <%= @bolso.marca %>
+</p>
+
+<p>
+  <strong>Modelo:</strong>
+  <%= @bolso.modelo %>
+</p>
+
+<p>
+  <strong>Cantidad:</strong>
+  <%= @bolso.cantidad %>
+</p>
+
+<p>
+  <strong>Precio:</strong>
+  <%= @bolso.precio %>
+</p>
+
+<%= link_to 'Edit', edit_bolso_path(@bolso) %> |
+<%= link_to 'Back', bolsos_path %>
